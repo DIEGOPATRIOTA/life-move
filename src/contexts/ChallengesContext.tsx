@@ -11,6 +11,7 @@ interface ChallengesContextData {
     level: number;
     currentExperience: number;
     challengesCompleted: number;
+    experienceToNextLevel: number;
     levelUp: () => void;
     startNewChallenge: () => void;
     activeChallenge: Challenge;
@@ -27,7 +28,11 @@ export function ChallengesProvider({ children }: ChallengesProviderProps) {
     const [level, setLevel] = useState(1);
     const [currentExperience, setCurrentExperience] = useState(0);
     const [challengesCompleted, setChallengesCompleted] = useState(0);
+
     const [activeChallenge, setActiveChallenge] = useState(null);
+
+    //RPG game level calculation
+    const experienceToNextLevel = Math.pow((level + 1) * 4, 2);
 
     function levelUp() {
         setLevel(level + 1);
@@ -40,7 +45,7 @@ export function ChallengesProvider({ children }: ChallengesProviderProps) {
     }
 
     function resetChallenge() {
-
+        setActiveChallenge(null);
     }
 
     return (
@@ -49,6 +54,7 @@ export function ChallengesProvider({ children }: ChallengesProviderProps) {
                 level, 
                 currentExperience, 
                 challengesCompleted, 
+                experienceToNextLevel, 
                 levelUp,
                 startNewChallenge,
                 activeChallenge,
