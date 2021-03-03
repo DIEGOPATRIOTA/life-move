@@ -1,34 +1,43 @@
 [![moveit](https://moveit-diegopatriota.vercel.app/logo-full.png)](moveit-diegopatriota.vercel.app)
 
+
+
+<p align="center">
+  <a href="#-project">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#Tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-layout">Começando</a>&nbsp;&nbsp;&nbsp;
+  
+</p>
+
+## 💻 Projeto
+
+[Move.it](https://moveit-diegopatriota.vercel.app/) é um aplicativo com o propósito de ajudar pessoas que ficam muito tempo sentadas trabalhando na frente do computador. Ele propôe exercícios em uma plataforma de gamificação gerando novos desafios, pontos e elevação de níveis. 💜 
+
 [![](https://moveit-diegopatriota.vercel.app/moveit-1.gif)](moveit-diegopatriota.vercel.app)
 
-#### Main
+## 🧪 Tecnologias
 
-Service to receive.
+Este projeto foi desenvolvido utilizando as seguintes tecnologias:
 
-## Infrastructure
+- [Next.js](https://nextjs.org/)
+- [React](https://reactjs.org)
+- [TypeScript](https://www.typescriptlang.org/)
 
-This repository is part of a bigger project, running multiple services
-[Git](https://github.com/DIEGOPATRIOTA/react-moveit.git).
 
-## Development
+## 🚀 Começando
 
-To run or debug this service.
+Clone o projeto e acesse a pasta
 
-> docker-compose up -d && npm run dev
-
-## App
-
-### Health Check
-
-```json
-{
-  "amqp": "CONSUMING",
-  "database": "UP",
-  "movements": {
-    "unit": "movements/minute",
-    "value": 15
-  },
-  "status": "UP"
-}
+```bash
+$ git clone https://github.com/DIEGOPATRIOTA/react-moveit.git && cd react-moveit
 ```
+
+Siga os passos abaixo
+```bash
+# Install the dependencies
+$ yarn
+
+# Start the project
+$ yarn dev
+```
+
