@@ -1,4 +1,4 @@
-[![moveit](https://moveit-diegopatriota.vercel.app/logo-full.png)](moveit-diegopatriota.vercel.app)
+[![life-move](https://life-move-diegopatriota.vercel.app/logo-full.png)](life-move-diegopatriota.vercel.app)
 
 
 
@@ -11,9 +11,9 @@
 
 ## 💻 Projeto
 
-[Move.it](https://moveit-diegopatriota.vercel.app/) é um aplicativo com o propósito de ajudar pessoas que ficam muito tempo sentadas trabalhando na frente do computador. Ele propôe exercícios em uma plataforma de gamificação gerando novos desafios, pontos e elevação de níveis. 💜 
+[life-move](https://life-move-diegopatriota.vercel.app/) é um aplicativo com o propósito de ajudar pessoas que ficam muito tempo sentadas trabalhando na frente do computador. Ele propôe exercícios em uma plataforma de gamificação gerando novos desafios, pontos e elevação de níveis. 💜 
 
-[![](https://moveit-diegopatriota.vercel.app/moveit-1.gif)](moveit-diegopatriota.vercel.app)
+[![](https://life-move-diegopatriota.vercel.app/life-move.gif)](life-move-diegopatriota.vercel.app)
 
 ## 🧪 Tecnologias
 
@@ -29,7 +29,7 @@ Este projeto foi desenvolvido utilizando as seguintes tecnologias:
 Clone o projeto e acesse a pasta
 
 ```bash
-$ git clone https://github.com/DIEGOPATRIOTA/react-moveit.git && cd react-moveit
+$ git clone https://github.com/DIEGOPATRIOTA/life-move.git && cd react-moveit
 ```
 
 Siga os passos abaixo
