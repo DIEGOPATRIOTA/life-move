@@ -30,7 +30,7 @@ export default function Home(props: HomeProps) {
       <div className={styles.container}>
         <Head>
           <link rel="stylesheet icon" href="favicon.png" type="image/x-icon" />
-          <title>Inicio | Move.it</title>
+          <title>Inicio | life-move</title>
         </Head>
 
         <ExperienceBar />

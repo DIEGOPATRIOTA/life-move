@@ -29,7 +29,7 @@ Este projeto foi desenvolvido utilizando as seguintes tecnologias:
 Clone o projeto e acesse a pasta
 
 ```bash
-$ git clone https://github.com/DIEGOPATRIOTA/life-move.git && cd react-moveit
+$ git clone https://github.com/DIEGOPATRIOTA/life-move.git && cd life-move
 ```
 
 Siga os passos abaixo
