@@ -6,8 +6,16 @@ export function CountDown() {
 
     const { minutes, segunds, hasFinished, isActive, startCountDown, resetCountDown } = useContext(CountDownContext);
 
+    const countDownLabel = {
+        closedCycle: "Ciclo encerrado",
+        abandonCycle: "Abandonar ciclo",
+        StartCycle: "Iniciar um ciclo"
+    };
+
     const [minuteLeft, minuteRight] = String(minutes).padStart(2, '0').split('');
     const [segundLeft, segundRight] = String(segunds).padStart(2, '0').split('');
+
+
 
     return (
         <div>
@@ -28,7 +36,7 @@ export function CountDown() {
                     disabled
                     className={styles.countdownButton}                    
                 >
-                    Ciclo encerrado
+                    {countDownLabel.closedCycle}
                 </button>
                 ) : (
                     <>
@@ -38,7 +46,7 @@ export function CountDown() {
                                 className={`${styles.countdownButton} ${styles.countdownButtonActive}`}
                                 onClick={resetCountDown}
                             >
-                                Abandonar ciclo
+                                {countDownLabel.abandonCycle}
                             </button>
                         ) : (
                             <button 
@@ -46,7 +54,7 @@ export function CountDown() {
                                 className={styles.countdownButton}
                                 onClick={startCountDown}
                             >
-                                Iniciar um ciclo
+                                {countDownLabel.StartCycle}
                             </button>
 
                         ) }
