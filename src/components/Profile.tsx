@@ -7,7 +7,7 @@ export function Profile() {
 
     const profileLabel = {
         userName: "Diego Patriota",
-        userImg: "Profile.jpg"
+        userImg: "profile.jpg"
     };
 
     return (
