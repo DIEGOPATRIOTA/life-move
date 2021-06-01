@@ -21,6 +21,10 @@ interface HomeProps {
 export default function Home(props: HomeProps) {
   console.log(props);
 
+  const homeLabel = {
+    title: "Inicio | life-move"
+  };
+
   return (
     <ChallengesProvider
       level={props.level}
@@ -30,7 +34,7 @@ export default function Home(props: HomeProps) {
       <div className={styles.container}>
         <Head>
           <link rel="stylesheet icon" href="favicon.png" type="image/x-icon" />
-          <title>Inicio | life-move</title>
+          <title>{homeLabel.title}</title>
         </Head>
 
         <ExperienceBar />

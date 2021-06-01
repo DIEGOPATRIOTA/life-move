@@ -7,6 +7,16 @@ export function ChallengeBox() {
     const { activeChallenge, resetChallenge, completeChallenge } = useContext(ChallengesContext);
     const { resetCountDown } = useContext(CountDownContext);
 
+    const ChallengeBoxLabel = {
+        mainCardLabel: "Finalize um ciclo para receber um desafio",
+        secundaryCardLabel: "Avance de level completando desafios.",
+        challengeFailedButtonLabel: "Falhei",
+        challengeSucceededButtonLabel: "Completei",
+        newChallngeLabel: "Novo desafio",
+        earnPointsPartOne: "Ganhe ",
+        earnPointsPartTwo: "xp"
+    };
+
     function handleChallengeSucceeded() {
          completeChallenge();
          resetCountDown(); 
@@ -21,10 +31,10 @@ export function ChallengeBox() {
         <div className={styles.challengeBoxContainer}>
             { activeChallenge ? (
                 <div className={styles.challengeActive}>
-                    <header>Ganhe { activeChallenge.amount } xp</header>
+                    <header>{ChallengeBoxLabel.earnPointsPartOne} { activeChallenge.amount } {ChallengeBoxLabel.earnPointsPartTwo}</header>
                     <main>
                         <img src={`icons/${activeChallenge.type}.svg`} />
-                        <strong>Novo desafio</strong>
+                        <strong>{ChallengeBoxLabel.newChallngeLabel}</strong>
                         <p> { activeChallenge.description } </p>
                     </main>
                     <footer>
@@ -33,23 +43,23 @@ export function ChallengeBox() {
                             className={styles.challengeFailedButton}
                             onClick={handleChallengeFailed}
                         >
-                            Falhei
+                            {ChallengeBoxLabel.challengeFailedButtonLabel}
                         </button>
                         <button 
                             type="button"
                             className={styles.challengeSucceededButton}
                             onClick={handleChallengeSucceeded}
                         >
-                            Completei
+                            {ChallengeBoxLabel.challengeSucceededButtonLabel}
                         </button>
                     </footer>
                 </div>
             ) : (
                 <div className={styles.challengeNotActive}>
-                    <strong>Finalize um ciclo para receber um desafio</strong>
+                    <strong>{ChallengeBoxLabel.mainCardLabel}</strong>
                     <p>
                         <img src="icons/level-up.svg" alt="Level Up"/>
-                        Avance de level completando desafios.
+                        {ChallengeBoxLabel.secundaryCardLabel}
                     </p>
                 </div>
             )}
