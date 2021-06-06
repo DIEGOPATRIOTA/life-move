@@ -5,6 +5,7 @@
 
 .experienceBar span {    
     font-size: 1rem;
+    color: var(--title);
 }
 
 .experienceBar > div {    

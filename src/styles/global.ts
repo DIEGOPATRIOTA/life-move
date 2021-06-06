@@ -13,12 +13,13 @@ export default createGlobalStyle`
      --grey-line: #DCDDE0;
      --text: #666666;
      --text-highlight: #B3B9FF;
-     --title: #2E384D;
+     --title: ${props => props.theme.colors.title};
      --red: #E83F5B;
      --green: #4CD62B;
-     --blue: #5965e0;
-     --blue-dark: #4953B8;
+     --blue: ${props => props.theme.colors.blueButton};
+     --blue-hover: ${props => props.theme.colors.blueHover};
      --blue-twitter: #2AA9E0;
+     --titleCountDown: ${props => props.theme.colors.titleCountDown};     
  }
  
  @media(max-width: 1080px){
