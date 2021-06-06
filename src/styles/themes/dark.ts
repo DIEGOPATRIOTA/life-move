@@ -6,6 +6,9 @@ export default {
         secundary: '#555',
         background: '#333',
         text: '#000',
-        title: "#fff"
+        title: "#fff",
+        titleCountDown: "#8C91E7", 
+        blueButton: "#8C91E7",
+        blueHover: "#454887"
     },
 };

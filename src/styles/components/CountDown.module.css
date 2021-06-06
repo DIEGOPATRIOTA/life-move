@@ -3,7 +3,7 @@
     align-items: center;
     font-family: Rajdhani;
     font-weight: 600;
-    color: var(--title);
+    color: var(--titleCountDown);
 }
 
 .countDownContainer > div{
@@ -12,7 +12,7 @@
     align-items: center;
     justify-content: space-evenly;
     background: var(--white);
-    box-shadow: 0 0 60px rgb(0, 0, 0, 0.05);
+    box-shadow: 0 0 15px #6b6c6d;
     border-radius: 5px;
     font-size: 8.5rem;
     text-align: center;
@@ -58,7 +58,7 @@
 }
 
 .countdownButton:not(:disabled):hover {
-    background: var(--blue-dark);
+    background: var(--blue-hover);
 }
 
 .countdownButtonActive {

@@ -10,10 +10,14 @@
     font-weight: 500;
 }
 
-.completedChallengesContainer spam:first-child {
+.completedChallengesContainer span{
+    color: var(--title);
+}
+
+.completedChallengesContainer span:first-child {
     font-size: 1.25rem;
 }
 
-.completedChallengesContainer spam:last-child {
+.completedChallengesContainer span:last-child {
     font-size: 1.5rem;
 }
