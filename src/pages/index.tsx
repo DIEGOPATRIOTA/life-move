@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import Head from 'next/head';
 import { GetServerSideProps } from 'next';
 
@@ -7,11 +8,14 @@ import { ExperienceBar } from '../components/ExperienceBar';
 import { Profile } from '../components/Profile';
 import { ChallengeBox } from '../components/ChallengeBox';
 
-
 import styles from '../styles/pages/Home.module.css';
 import { ChallengesProvider } from '../contexts/ChallengesContext';
 import { CountDownProvider } from '../contexts/CountDownContext';
 
+import { DefaultTheme, ThemeProvider } from 'styled-components';
+import Switch from 'react-switch';
+import { combineTheme, dark, light } from '../styles/themes';
+import GlobalStyles from '../styles/global';
 interface HomeProps {
   level: number;
   currentExperience: number;
@@ -19,8 +23,13 @@ interface HomeProps {
 }
 
 export default function Home(props: HomeProps) {
-  console.log(props);
 
+  const [theme, setTheme] = useState<DefaultTheme>(combineTheme(light));
+  
+  const toggleTheme = () => {
+    setTheme(theme.title === 'light' ? combineTheme(dark) : combineTheme(light));
+  };
+  
   const homeLabel = {
     title: "Inicio | life-move"
   };
@@ -31,8 +40,13 @@ export default function Home(props: HomeProps) {
       currentExperience={props.currentExperience}
       challengesCompleted={props.challengesCompleted}
     >
+      <ThemeProvider theme={theme}>
+      <GlobalStyles />
+      <Switch checked={theme.title === 'dark'} onChange={toggleTheme} />
       <div className={styles.container}>
         <Head>
+          <link rel="preconnect" href="https://fonts.gstatic.com"/>
+          <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Rajdhani:wght@600&display=swap" rel="stylesheet"/>
           <link rel="stylesheet icon" href="favicon.png" type="image/x-icon" />
           <title>{homeLabel.title}</title>
         </Head>
@@ -52,6 +66,7 @@ export default function Home(props: HomeProps) {
           </section>
         </CountDownProvider>
       </div>
+      </ThemeProvider>       
     </ChallengesProvider> 
   )
 }
