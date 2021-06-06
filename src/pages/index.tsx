@@ -13,9 +13,10 @@ import { ChallengesProvider } from '../contexts/ChallengesContext';
 import { CountDownProvider } from '../contexts/CountDownContext';
 
 import { DefaultTheme, ThemeProvider } from 'styled-components';
-import Switch from 'react-switch';
 import { combineTheme, dark, light } from '../styles/themes';
 import GlobalStyles from '../styles/global';
+import Switch from '@material-ui/core/Switch';
+import Box from '@material-ui/core/Box';
 interface HomeProps {
   level: number;
   currentExperience: number;
@@ -42,7 +43,6 @@ export default function Home(props: HomeProps) {
     >
       <ThemeProvider theme={theme}>
       <GlobalStyles />
-      <Switch checked={theme.title === 'dark'} onChange={toggleTheme} />
       <div className={styles.container}>
         <Head>
           <link rel="preconnect" href="https://fonts.gstatic.com"/>
@@ -50,13 +50,18 @@ export default function Home(props: HomeProps) {
           <link rel="stylesheet icon" href="favicon.png" type="image/x-icon" />
           <title>{homeLabel.title}</title>
         </Head>
-
         <ExperienceBar />
-
         <CountDownProvider>
           <section>
-            <div >
-              <Profile />
+            <div>
+            <Box display="flex" p={1}>
+              <Box p={1} flexGrow={1}>
+                <Profile />
+              </Box>
+              <Box p={1}>
+                <Switch color="primary" checked={theme.title === 'dark'} onChange={toggleTheme} />                
+              </Box>              
+            </Box>
               <CompletedChallenges />
               <CountDown />
             </div>
