@@ -1,17 +1,9 @@
-# This is a basic workflow to help you get started with Actions
-
 name: CI life-move
 
-# Controls when the action will run. 
-on:
-  pull_request:
-    branches:
-      - main
+on: pull_request
 jobs:
-  vercel: 
+  deploy:
     runs-on: ubuntu-latest
-    name: "Deploy front-end"
-    
     steps:
       - uses: actions/checkout@v2
       - uses: diegopatriota/life-move@main
@@ -22,4 +14,3 @@ jobs:
           vercel-org-id: ${{ secrets.ORG_ID}}
           vercel-project-id: ${{ secrets.PROJECT_ID}}
           working-directory: ./sub-directory
-      
