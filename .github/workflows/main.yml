@@ -22,7 +22,6 @@ jobs:
           if [[ ${GITHUB_REF} == "refs/heads/main" ]]; then
             prodRun="--prod"
           fi
-
           npx vercel $prodRun
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
